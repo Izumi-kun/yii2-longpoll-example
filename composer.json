@@ -16,12 +16,6 @@
     "config": {
         "process-timeout": 1800
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "/Users/viktor/dev/yii2-longpoll"
-        }
-    ],
     "extra": {
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",
