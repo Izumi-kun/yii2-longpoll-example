@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "41613c0eee99672cb92a9488742d43a3",
+    "content-hash": "19f8bcfb39fc64a3e28f7fb004fd1ce5",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -303,19 +303,20 @@
         },
         {
             "name": "izumi-kun/yii2-longpoll",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Izumi-kun/yii2-longpoll.git",
-                "reference": "321be90dd35d238a438a4ec572fa3c2671b6bff4"
+                "reference": "522539528dc4a752ce88f994efe12c9465534bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Izumi-kun/yii2-longpoll/zipball/321be90dd35d238a438a4ec572fa3c2671b6bff4",
-                "reference": "321be90dd35d238a438a4ec572fa3c2671b6bff4",
+                "url": "https://api.github.com/repos/Izumi-kun/yii2-longpoll/zipball/522539528dc4a752ce88f994efe12c9465534bf8",
+                "reference": "522539528dc4a752ce88f994efe12c9465534bf8",
                 "shasum": ""
             },
             "require": {
+                "npm-asset/jquery-longpoll-client": "0.2.0",
                 "yiisoft/yii2": "~2.0.0"
             },
             "type": "yii2-extension",
@@ -349,7 +350,53 @@
                 "server",
                 "yii2"
             ],
-            "time": "2017-01-26 21:52:45"
+            "time": "2017-01-29T19:47:01+00:00"
+        },
+        {
+            "name": "npm-asset/jquery-longpoll-client",
+            "version": "0.2.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery-longpoll-client/-/jquery-longpoll-client-0.2.0.tgz",
+                "reference": null,
+                "shasum": "8731f1ecfe3043ad89c3af549769387748ead612"
+            },
+            "require-dev": {
+                "npm-asset/grunt": "1.0.1",
+                "npm-asset/grunt-contrib-uglify": "2.0.0",
+                "npm-asset/jquery": "2.2.4"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/Izumi-kun/jquery-longpoll-client/issues"
+                },
+                "npm-asset-files": [
+                    "src",
+                    "dist",
+                    "LICENSE.md"
+                ],
+                "npm-asset-main": "src/jquery.longpoll.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/Izumi-kun/jquery-longpoll-client.git"
+                },
+                "npm-asset-scripts": {
+                    "build": "grunt build"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Viktor Khokhryakov",
+                    "email": "viktor.khokhryakov@gmail.com"
+                }
+            ],
+            "description": "Simple client-side longpoll implementation",
+            "homepage": "https://github.com/Izumi-kun/jquery-longpoll-client#readme"
         },
         {
             "name": "yiisoft/yii2",
@@ -597,9 +644,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "izumi-kun/yii2-longpoll": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
