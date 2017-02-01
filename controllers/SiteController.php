@@ -10,6 +10,22 @@ use yii\web\Controller;
 class SiteController extends Controller
 {
 
+    public function actions()
+    {
+        return [
+            'polling' => [
+                'class' => 'izumi\longpoll\LongPollAction',
+                'events' => ['newMessage'],
+                'callback' => [$this, 'longPollCallback'],
+            ],
+        ];
+    }
+
+    public function longPollCallback(Server $server)
+    {
+        $server->responseData = Yii::$app->cache->get('message');
+    }
+
     /**
      * Displays homepage.
      *
@@ -34,18 +50,5 @@ class SiteController extends Controller
         return $this->render('changeMessage', [
             'model' => $model,
         ]);
-    }
-
-    public function actionPolling()
-    {
-        $poll = new Server([
-            'events' => ['newMessage'],
-        ]);
-        $poll->run();
-        if ($poll->triggeredEvents) {
-            $poll->responseData = Yii::$app->cache->get('message');
-        }
-
-        return $poll->getResponse();
     }
 }
